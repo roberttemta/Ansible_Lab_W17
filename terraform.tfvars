@@ -24,4 +24,4 @@ instance_configurations = {
 
 region = "us-east-1"
 
-keypair-name= "ansible-key"
+keypair-name = "ansible-key"

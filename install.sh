@@ -15,7 +15,12 @@ echo "PS1='\e[1;32m\u@\h \w$ \e[m'" >> /home/ec2-user/.bash_profile
 # Install git on Master Nodes
 
 sudo yum install git wget curl -y
-git clone https://github.com/roberttemta/Ansible_playbooks_w17.git
-mv Ansible_playbooks_w17/* /home/ec2-user/
-rm -rf Ansible_playbooks_w17
-sudo chown -R ec2-user:ec2-user /home/ec2-user/
+git clone https://github.com/roberttemta/Ansible_playbooks_w18.git
+mkdir ansible-dev
+mv Ansible_playbooks_w18/* /home/ec2-user/ansible-dev/
+rm -rf Ansible_playbooks_w18
+sudo chown -R ec2-user:ec2-user /home/ec2-user/ansible-dev
+
+# Install Java
+
+sudo amazon-linux-extras install java-openjdk11 
